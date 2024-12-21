@@ -28,7 +28,11 @@ L<Task::Kensho>.
 
 =head1 BUGS AND LIMITATIONS
 
+Please report any issues with this at L<https://github.com/CPAN-Security/Task-CPANSec/issues>.
+
 =head1 AUTHOR
+
+Robert Rothenberg <rrwo@cpan.org>
 
 =head1 COPYRIGHT AND LICENCE
 
