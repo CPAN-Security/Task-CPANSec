@@ -74,8 +74,12 @@ It supports methods for returning random bytes, integers or floats.
 
 =head2 L<Math::Random::ISAAC>
 
-This is an implementation of the ISAAC PRNG that can generate 32-bit unsigned integers very quickly (in less than 20
-CPU cycles/integer).
+This is an implementation of the ISAAC PRNG that can generate 32-bit unsigned integers very quickly (in less than 20 CPU
+cycles/integer). There is also a companion L<Math::Random::ISAAC::XS> that can be used for for improved performance.
+
+Note that it must be seeded properly before using for cryptographic purposes, e.g.
+
+    my $prng = Math::Randam::ISAAC->new( unpack( "N*", urandom(1024) ) );
 
 =head1 BUGS AND LIMITATIONS
 
