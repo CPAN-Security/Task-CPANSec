@@ -58,6 +58,9 @@ Note that in recent versions of Linux, there is no difference between F</dev/ura
 This is an XS module that initialises the ISAAC PRNG with data from F</dev/urandom> and can generate token strings. It
 can be customised to generate strings with arbitrary alphabets and lengths.
 
+Note that there is still an L<unreleased change|https://github.com/hoytech/Session-Token/pull/3> in the git repository
+for this module that fixes an issue with missing null terminators.
+
 =head2 Cryptographic Pseudo-Random Number Generators
 
 It is often faster to use a cryptographic quality PRNG than to make system calls or read from F</dev/urandom>.
