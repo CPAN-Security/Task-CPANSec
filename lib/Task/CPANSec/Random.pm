@@ -81,6 +81,14 @@ Note that it must be seeded properly before using for cryptographic purposes, e.
 
     my $prng = Math::Randam::ISAAC->new( unpack( "N*", urandom(1024) ) );
 
+=head1 SEE ALSO
+
+=over
+
+=item L<ISAAC|https://burtleburtle.net/bob/rand/isaac.html>
+
+=back
+
 =head1 BUGS AND LIMITATIONS
 
 Please report any issues with this at L<https://github.com/CPAN-Security/Task-CPANSec/issues>.
