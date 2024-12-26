@@ -61,6 +61,15 @@ can be customised to generate strings with arbitrary alphabets and lengths.
 Note that there is still an L<unreleased change|https://github.com/hoytech/Session-Token/pull/3> in the git repository
 for this module that fixes an issue with missing null terminators.
 
+=head3 L<Sys::GetRandom>
+
+This is an XS module that calls the system L<getrandom(2)> function, and only works on Linux and BSD versions that
+support it.  It is generally faster than making system calls or reading from F</dev/urandom>.
+
+=head3 L<Sys::GetRandom::PP>
+
+This is a pure-Perl version of L<Sys::GetRandom> that makes system calls to the L<getrandom(2)> function.
+
 =head2 Cryptographic Pseudo-Random Number Generators
 
 It is often faster to use a cryptographic quality PRNG than to make system calls or read from F</dev/urandom>.
