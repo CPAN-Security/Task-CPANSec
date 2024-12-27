@@ -53,14 +53,6 @@ the Win32 API on Windows 2000 or later.
 
 Note that in recent versions of Linux, there is no difference between F</dev/urandom> and F</dev/random>.
 
-=head3 L<Session::Token>
-
-This is an XS module that initialises the ISAAC PRNG with data from F</dev/urandom> and can generate token strings. It
-can be customised to generate strings with arbitrary alphabets and lengths.
-
-Note that there is still an L<unreleased change|https://github.com/hoytech/Session-Token/pull/3> in the git repository
-for this module that fixes an issue with missing null terminators.
-
 =head3 L<Sys::GetRandom>
 
 This is an XS module that calls the system L<getrandom(2)> function, and only works on Linux and BSD versions that
@@ -89,6 +81,14 @@ cycles/integer). There is also a companion L<Math::Random::ISAAC::XS> that can b
 Note that it must be seeded properly before using for cryptographic purposes, e.g.
 
     my $prng = Math::Randam::ISAAC->new( unpack( "N*", urandom(1024) ) );
+
+=head3 L<Session::Token>
+
+This is an XS module that initialises the ISAAC PRNG with data from F</dev/urandom> and can generate token strings. It
+can be customised to generate strings with arbitrary alphabets and lengths.
+
+Note that there is still an L<unreleased change|https://github.com/hoytech/Session-Token/pull/3> in the git repository
+for this module that fixes an issue with missing null terminators.
 
 =head1 SEE ALSO
 
