@@ -40,6 +40,9 @@ a URL.
 
 =back
 
+This list is not exhaustive, but it contains modules that we believe are good solutions for their tasks, and are being
+actively maintained.
+
 =head1 RECOMMENDED MODULES
 
 =head2 Modules for retrieving random data
