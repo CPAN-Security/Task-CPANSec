@@ -40,6 +40,9 @@ a URL.
 
 =back
 
+This list is not exhaustive, but it contains modules that we believe are good solutions for their tasks, and are being
+actively maintained.
+
 =head1 RECOMMENDED MODULES
 
 =head2 Modules for retrieving random data
@@ -53,10 +56,14 @@ the Win32 API on Windows 2000 or later.
 
 Note that in recent versions of Linux, there is no difference between F</dev/urandom> and F</dev/random>.
 
-=head3 L<Session::Token>
+=head3 L<Sys::GetRandom>
 
-This is an XS module that initialises the ISAAC PRNG with data from F</dev/urandom> and can generate token strings. It
-can be customised to generate strings with arbitrary alphabets and lengths.
+This is an XS module that calls the system L<getrandom(2)> function, and only works on Linux and BSD versions that
+support it.  It is generally faster than making system calls or reading from F</dev/urandom>.
+
+=head3 L<Sys::GetRandom::PP>
+
+This is a pure-Perl version of L<Sys::GetRandom> that makes system calls to the L<getrandom(2)> function.
 
 =head2 Cryptographic Pseudo-Random Number Generators
 
@@ -71,8 +78,28 @@ It supports methods for returning random bytes, integers or floats.
 
 =head2 L<Math::Random::ISAAC>
 
-This is an implementation of the ISAAC PRNG that can generate 32-bit unsigned integers very quickly (in less than 20
-CPU cycles/integer).
+This is an implementation of the ISAAC PRNG that can generate 32-bit unsigned integers very quickly (in less than 20 CPU
+cycles/integer). There is also a companion L<Math::Random::ISAAC::XS> that can be used for for improved performance.
+
+Note that it must be seeded properly before using for cryptographic purposes, e.g.
+
+    my $prng = Math::Randam::ISAAC->new( unpack( "N*", urandom(1024) ) );
+
+=head3 L<Session::Token>
+
+This is an XS module that initialises the ISAAC PRNG with data from F</dev/urandom> and can generate token strings. It
+can be customised to generate strings with arbitrary alphabets and lengths.
+
+Note that there is still an L<unreleased change|https://github.com/hoytech/Session-Token/pull/3> in the git repository
+for this module that fixes an issue with missing null terminators.
+
+=head1 SEE ALSO
+
+=over
+
+=item L<ISAAC|https://burtleburtle.net/bob/rand/isaac.html>
+
+=back
 
 =head1 BUGS AND LIMITATIONS
 
