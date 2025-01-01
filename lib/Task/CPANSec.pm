@@ -1,5 +1,7 @@
 package Task::CPANSec;
 
+# ABSTRACT: Recommended modules from the CPAN Security Group
+
 use strict;
 use warnings;
 
@@ -8,10 +10,6 @@ our $VERSION = 'v0.0.1';
 __END__
 
 =pod
-
-=head1 NAME
-
-Task::CPANSec - recommended modules from the CPAN Security Group
 
 =head1 STATUS
 
@@ -28,15 +26,5 @@ actively maintained.
 =head1 CATEGORIES
 
 =head2 L<Task::CPANSec::Random>: for generating random data
-
-=head1 BUGS AND LIMITATIONS
-
-Please report any issues with this at L<https://github.com/CPAN-Security/Task-CPANSec/issues>.
-
-=head1 AUTHOR
-
-Robert Rothenberg <rrwo@cpan.org>
-
-=head1 COPYRIGHT AND LICENCE
 
 =cut

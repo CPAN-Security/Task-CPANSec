@@ -1,5 +1,7 @@
 package Task::CPANSec::Random;
 
+# ABSTRACT: Recommended modules for generating random data
+
 use strict;
 use warnings;
 
@@ -8,10 +10,6 @@ our $VERSION = 'v0.0.1';
 __END__
 
 =pod
-
-=head1 NAME
-
-Task::CPANSec::Random - recommended modules for generating random data
 
 =head1 STATUS
 
@@ -100,15 +98,5 @@ for this module that fixes an issue with missing null terminators.
 =item L<ISAAC|https://burtleburtle.net/bob/rand/isaac.html>
 
 =back
-
-=head1 BUGS AND LIMITATIONS
-
-Please report any issues with this at L<https://github.com/CPAN-Security/Task-CPANSec/issues>.
-
-=head1 AUTHOR
-
-Robert Rothenberg <rrwo@cpan.org>
-
-=head1 COPYRIGHT AND LICENCE
 
 =cut
