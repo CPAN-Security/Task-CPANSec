@@ -47,6 +47,10 @@ actively maintained.
 
 This contains a list of modules for retrieving random data.
 
+=cut
+
+# RECOMMEND PREREQ: Crypt::URandom
+
 =head3 L<Crypt::URandom>
 
 This is a pure-Perl and platform-independent module for retrieving raw bytes from the F</dev/urandom> device, or from
@@ -54,10 +58,18 @@ the Win32 API on Windows 2000 or later.
 
 Note that in recent versions of Linux, there is no difference between F</dev/urandom> and F</dev/random>.
 
+=cut
+
+# RECOMMEND PREREQ: Sys::GetRandom
+
 =head3 L<Sys::GetRandom>
 
 This is an XS module that calls the system L<getrandom(2)> function, and only works on Linux and BSD versions that
 support it.  It is generally faster than making system calls or reading from F</dev/urandom>.
+
+=cut
+
+# RECOMMEND PREREQ: Sys::GetRandom::PP
 
 =head3 L<Sys::GetRandom::PP>
 
@@ -67,12 +79,20 @@ This is a pure-Perl version of L<Sys::GetRandom> that makes system calls to the 
 
 It is often faster to use a cryptographic quality PRNG than to make system calls or read from F</dev/urandom>.
 
+=cut
+
+# RECOMMEND PREREQ: Crypt::PRNG
+
 =head3 L<Crypt::PRNG>
 
 This is a collection of stream ciphers in L<CryptX> that can be used as pseudo-random number generators.
 By default they are initialised with data from F</dev/urandom>.
 
 It supports methods for returning random bytes, integers or floats.
+
+=cut
+
+# RECOMMEND PREREQ: Math::Random::ISAAC
 
 =head2 L<Math::Random::ISAAC>
 
@@ -82,6 +102,10 @@ cycles/integer). There is also a companion L<Math::Random::ISAAC::XS> that can b
 Note that it must be seeded properly before using for cryptographic purposes, e.g.
 
     my $prng = Math::Randam::ISAAC->new( unpack( "N*", urandom(1024) ) );
+
+=cut
+
+# RECOMMEND PREREQ: Session::Token
 
 =head3 L<Session::Token>
 
