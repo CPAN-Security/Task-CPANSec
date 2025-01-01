@@ -38,10 +38,30 @@ a URL.
 
 =back
 
-This list is not exhaustive, but it contains modules that we believe are good solutions for their tasks, and are being
-actively maintained.
+Fortunately, modern operating systems provide access to good sources of random data:
+
+=over
+
+=item *
+
+Linux and BSD variants have devices like F</dev/random> and F</dev/urandom>.
+
+=item *
+
+Newer Linux and BSD variants have the L<getrandom(2)> or L<getentropy(2)> system functions.
+
+=item
+
+Windows provides a C<CryptGenRandom> function in the API.
+
+=back
+
+These sources are easy to access from Perl using several modules.
 
 =head1 RECOMMENDED MODULES
+
+This list is not exhaustive, but it contains modules that we believe are good solutions for their tasks, and are being
+actively maintained.
 
 =head2 Modules for retrieving random data
 
