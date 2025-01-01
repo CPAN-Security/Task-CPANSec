@@ -78,7 +78,9 @@ the Win32 API on Windows 2000 or later.
 
 Newer versions may use the system L<getrandom(2)> or L<getentropy(2)> functions.
 
-Note that in recent versions of Linux, there is no difference between F</dev/urandom> and F</dev/random>.
+It is important to note that there is a common misconception that F</dev/urandom> is insecure. This is untrue, as
+F</dev/random> and F</dev/urandom> use the same entropy pool and PRNG internally.
+In newer Linux kernels, there is no difference between F</dev/urandom> and F</dev/random>.
 
 =cut
 
