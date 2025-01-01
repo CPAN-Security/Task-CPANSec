@@ -53,8 +53,10 @@ This contains a list of modules for retrieving random data.
 
 =head3 L<Crypt::URandom>
 
-This is a pure-Perl and platform-independent module for retrieving raw bytes from the F</dev/urandom> device, or from
+This is a platform-independent module for retrieving raw bytes from the F</dev/urandom> device, or from
 the Win32 API on Windows 2000 or later.
+
+Newer versions may use the system L<getrandom(2)> or L<getentropy(2)> functions.
 
 Note that in recent versions of Linux, there is no difference between F</dev/urandom> and F</dev/random>.
 
