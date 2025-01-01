@@ -1,0 +1,4 @@
+Task-CPANSec-v*/
+Task-CPANSec-v*.tar.gz
+.build/
+.git/
