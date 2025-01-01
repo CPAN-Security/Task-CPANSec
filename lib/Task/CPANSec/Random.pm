@@ -143,7 +143,13 @@ for this module that fixes an issue with missing null terminators.
 
 =over
 
-=item L<ISAAC|https://burtleburtle.net/bob/rand/isaac.html>
+=item *
+
+L<ISAAC|https://burtleburtle.net/bob/rand/isaac.html>
+
+=item *
+
+L<Myths about /dev/urandom|https://www.thomas-huehn.com/myths-about-urandom/>
 
 =back
 
