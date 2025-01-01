@@ -48,7 +48,7 @@ Linux and BSD variants have devices like F</dev/random> and F</dev/urandom>.
 
 =item *
 
-Newer Linux and BSD variants have the L<getrandom(2)> or L<getentropy(2)> system functions.
+Newer Linux and BSD variants have the L<getrandom(2)> or L<getentropy(2)|https://man.openbsd.org/getentropy> system functions.
 
 =item
 
@@ -76,7 +76,7 @@ This contains a list of modules for retrieving random data.
 This is a platform-independent module for retrieving raw bytes from the F</dev/urandom> device, or from
 the Win32 API on Windows 2000 or later.
 
-Newer versions may use the system L<getrandom(2)> or L<getentropy(2)> functions.
+Newer versions may use the system L<getrandom(2)> or L<getentropy(2)|https://man.openbsd.org/getentropy> functions.
 
 It is important to note that there is a common misconception that F</dev/urandom> is insecure. This is untrue, as
 F</dev/random> and F</dev/urandom> use the same entropy pool and PRNG internally.
