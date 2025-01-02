@@ -17,7 +17,7 @@ This is a draft.
 
 =head1 DESCRIPTION
 
-This contains a list of modules for retrieving or generating cryptographic-quality random and pseudo-radom data.
+This package contains a list of modules for retrieving or generating cryptographic-quality random and pseudo-random data.
 
 This is important when the data is used for security purposes, for example, with
 
