@@ -65,6 +65,8 @@ These sources are easy to access from Perl using several modules.
 This list is not exhaustive, but it contains modules that we believe are good solutions for their tasks, and are being
 actively maintained.
 
+Also note that this list is focused on random data for I<security>, and not statistical properties for modelling.
+
 =head2 Modules for retrieving random data
 
 This contains a list of modules for retrieving random data.
